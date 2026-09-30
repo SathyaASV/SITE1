@@ -209,7 +209,7 @@ async function send(){
  ovt.textContent=steps[0];requestAnimationFrame(()=>ovb.style.width='100%');
  let i=0;const iv=setInterval(()=>{ovt.textContent=steps[Math.min(++i,4)]},800);
  const payload=Q.filter(q=>q.id).map(q=>({id:q.id,q:q.t.replace(/<[^>]+>/g,' '),a:ans(q)}));
- const post=fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answers:payload,sid})}).then(r=>{if(!r.ok)throw 0});
+ const post=fetch('/.netlify/functions/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answers:payload,sid})}).then(r=>{if(!r.ok)throw 0});
  try{await Promise.all([post,new Promise(r=>setTimeout(r,3600))]);clearInterval(iv);ov.style.display='none';$('#inv').style.display='none';document.body.classList.remove('q');finale()}
  catch{clearInterval(iv);ovt.textContent='Hmm, that didn\'t send 😭 Your answers are still here — try again?';$('#retry').style.display='block'}
 }
