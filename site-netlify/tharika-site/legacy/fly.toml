@@ -1,0 +1,17 @@
+app = "tharika-site"          # change to a unique name
+primary_region = "sin"
+[build]
+[env]
+  DB_PATH = "/data/submissions.db"
+[mounts]
+  source = "data"
+  destination = "/data"
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = "off"
+  min_machines_running = 1
+  [[http_service.checks]]
+    path = "/healthz"
+    interval = "30s"
+    timeout = "5s"

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex"><title>For Tharika 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--p:#ff8fb1;--d:#d6457a;--ink:#4a2540;--l:#c9b6ff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;font:600 18px/1.55 Quicksand,system-ui,sans-serif;color:var(--ink);background:linear-gradient(160deg,#fff0f5,#ffe1ec 45%,#f1e6ff) fixed;overflow-x:hidden}
+h1,h2{font-family:Pacifico,cursive;font-weight:400;color:var(--d);line-height:1.25;margin:0 0 12px}
+h1{font-size:clamp(34px,9vw,56px)}h2{font-size:clamp(26px,7vw,38px)}h3{font-size:clamp(21px,5.6vw,27px);line-height:1.3;margin:6px 0 14px}
+p{margin:0 0 14px}small,.hint{font-size:15px;opacity:.75}
+.s{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:64px 22px;position:relative;z-index:1}
+.wrap{width:100%;max-width:560px;margin:0 auto}
+.glass,.card{background:rgba(255,255,255,.66);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid #fff;border-radius:28px;box-shadow:0 14px 40px #d6457a22;padding:26px 22px}
+.card{margin:26px 0;text-align:left}
+.btn{font:700 19px Quicksand,sans-serif;background:linear-gradient(135deg,#ff8fb1,#e26aa0);color:#fff;border:0;border-radius:999px;min-height:56px;padding:14px 30px;box-shadow:0 8px 22px #d6457a55;cursor:pointer;transition:transform .15s}
+.btn:active{transform:scale(.94)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+.fl{position:fixed;bottom:-40px;z-index:0;pointer-events:none;animation:up linear infinite;will-change:transform}
+@keyframes up{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.bob{animation:bob 3s ease-in-out infinite;display:inline-block}@keyframes bob{50%{transform:translateY(-8px) rotate(3deg)}}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font:700 16px Quicksand,sans-serif;color:var(--ink);background:#fff;border:2px solid #ffd0e0;border-radius:999px;min-height:48px;padding:10px 16px;cursor:pointer;transition:transform .15s,background .2s}
+.chip.on{background:var(--p);border-color:var(--p);color:#fff;animation:pop .35s}
+@keyframes pop{40%{transform:scale(1.12)}}
+input[type=range]{width:100%;height:44px;accent-color:var(--d)}
+textarea,input[type=text]{width:100%;font:600 17px Quicksand,sans-serif;color:var(--ink);background:#fff;border:2px solid #ffd0e0;border-radius:18px;padding:14px;margin-top:12px;resize:vertical;outline:0}
+textarea:focus,input[type=text]:focus{border-color:var(--p)}
+.rx{min-height:28px;margin-top:12px;color:var(--d);font-weight:700}.rx.pop{animation:pop .4s}
+.face{font-size:52px;text-align:center}
+.note{margin:34px auto;max-width:440px;text-align:center;font-family:Pacifico,cursive;font-size:20px;color:var(--d);line-height:1.6}
+.banner{background:#ff5c8a;color:#fff;border-radius:12px;padding:8px 12px;font-weight:700;display:inline-block;margin-bottom:10px;animation:wig 1s infinite}
+@keyframes wig{50%{transform:rotate(-1.5deg)}}
+.chaos{border:2.5px dashed #ff5c8a}
+.emo{background:rgba(255,255,255,.85);text-align:center}
+.shake{animation:sh .45s}@keyframes sh{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.prog{position:sticky;top:10px;z-index:5;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-radius:999px;padding:8px 16px;text-align:center;font-size:15px;font-weight:700;box-shadow:0 4px 16px #d6457a22}
+.prog i{display:block;height:7px;background:#ffe0ec;border-radius:9px;margin-top:5px;overflow:hidden}
+.prog b{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff8fb1,#c9b6ff);transition:width .6s cubic-bezier(.3,1.4,.5,1)}
+#ov{position:fixed;inset:0;z-index:50;background:rgba(255,240,245,.94);display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+#ov b{display:block;width:220px;height:10px;background:#ffd0e0;border-radius:9px;margin-top:18px;overflow:hidden}#ov b i{display:block;height:100%;width:0;background:var(--d);transition:width 3.4s ease-out}
+#fin{display:none;background:radial-gradient(circle at 50% 0,#fff,transparent 60%)}
+#fin p{font-size:20px}
+.dnc{background:none;border:0;font:600 12px Quicksand;color:#b58aa3;padding:14px;cursor:pointer}
+#eh{position:fixed;left:8px;bottom:8px;z-index:6;font-size:16px;opacity:.35;background:none;border:0;padding:10px;cursor:pointer}
+#toast{position:fixed;left:50%;top:18px;transform:translate(-50%,-90px);z-index:60;background:#fff;color:var(--d);padding:12px 20px;border-radius:999px;box-shadow:0 8px 30px #d6457a44;font-weight:700;transition:transform .5s cubic-bezier(.3,1.5,.5,1);text-align:center}
+#toast.on{transform:translate(-50%,0)}
+.cf{position:fixed;top:-30px;z-index:70;pointer-events:none;animation:fall 3.2s ease-in forwards}@keyframes fall{to{transform:translateY(110vh) rotate(500deg)}}
+.step{display:none}.step.cur{display:block;animation:stin .5s}@keyframes stin{from{opacity:0;transform:translateY(18px)}}
+.nav{display:flex;justify-content:space-between;align-items:center;margin:8px 0 120px}
+.yn{position:relative;height:150px;margin-top:10px}.yn .btn{position:absolute;top:0;min-width:110px}#yes{left:0}#no{right:0;background:linear-gradient(135deg,#c9b6ff,#9b7fe0);box-shadow:0 8px 22px #9b7fe055;transition:left .28s,top .28s}
+.env,.gift{font-size:84px;background:none;border:0;cursor:pointer;padding:10px;filter:drop-shadow(0 10px 14px #d6457a44)}
+.gift.sk{animation:gs .9s}@keyframes gs{10%,50%,90%{transform:rotate(-14deg) scale(1.1)}30%,70%{transform:rotate(14deg) scale(1.1)}}
+.wt{font-size:clamp(60px,20vw,120px)}
+#mas{position:fixed;right:10px;bottom:10px;z-index:6;display:none;align-items:flex-end;gap:6px;pointer-events:none}body.q #mas{display:flex}
+#mf{font-size:40px}#mb{background:#fff;color:var(--d);border-radius:16px;padding:8px 12px;font-size:15px;font-weight:700;box-shadow:0 6px 20px #d6457a33;max-width:190px;opacity:0;transform:scale(.8);transition:.3s}#mb.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.fl{display:none}html{scroll-behavior:auto}}
+</style></head><body>
+<div id="bg" aria-hidden="true"></div><div id="toast"></div>
+<div id="mas" aria-hidden="true"><div id="mb"></div><div id="mf">🐰</div></div>
+<button id="eh" aria-label="tiny heart">💗</button>
+
+<section class="s" id="s0"><div class="wrap">
+<div class="bob" style="font-size:64px">💌</div>
+<h1 class="reveal in">Hey Tharika...</h1>
+<p class="reveal in" style="--d:.5s;font-size:21px">I made a tiny corner of the internet for you.</p>
+<p class="reveal in hint" style="--d:1s">No, this isn't an exam.<br>You can relax. 😭</p>
+<button class="btn reveal in" style="--d:1.5s" data-go="s1">Okayyy, what is this? →</button>
+</div></section>
+
+<section class="s" id="s1"><div class="wrap">
+<p class="reveal hint">Before we begin...</p>
+<h2 class="reveal" style="--d:.2s">This isn't a survey.<br>This isn't a test.</h2>
+<p class="reveal" style="--d:.5s;font-size:21px">And thankfully...<br>there are no wrong answers. 😭</p>
+<p class="reveal" style="--d:.9s">I just wanted to make something for someone who matters to me. ✨</p>
+<button class="btn reveal" style="--d:1.4s" data-go="s2">Okay, go on →</button>
+</div></section>
+
+<section class="s" id="s2"><div class="wrap glass reveal">
+<h2>Just so you know... 💗</h2>
+<p>Even if I don't always say it,<br>I genuinely value having you around.</p>
+<p>You've listened to me,<br>tolerated my nonsense,<br>survived my stupid messages...</p>
+<p>Honestly, that's an achievement. 💀</p>
+<p>So yes, this website exists because I care.</p>
+<p class="hint">And apparently saying that normally wasn't dramatic enough. 😭</p>
+<button class="btn" data-go="inv">Let's begin 🔍</button>
+</div></section>
+
+<section id="inv" style="padding:40px 20px 20px;position:relative;z-index:1"><div class="wrap">
+<div class="prog"><span id="pt">Friendship Investigation: 0% 🔍</span><i><b id="pf"></b></i></div>
+<div style="text-align:center;margin-top:34px" class="reveal">
+<h2>🔍 THE OFFICIAL THARIKA FRIENDSHIP INVESTIGATION™</h2><p class="hint">Conducted by absolutely nobody qualified.</p></div>
+<div id="qs"></div>
+<div id="endblk" style="text-align:center;margin:30px 0 10px">
+<p>That's everything. Take a breath. 🫶<br><small>Skip anything you don't feel like answering.</small></p>
+<button class="btn" id="sub">Send my honest answers 💗</button><br>
+<button class="dnc" id="dnc">Do NOT click this</button></div>
+</div></section>
+
+<div id="ov"><div id="ovt" style="font-size:24px;font-weight:700;color:var(--d)"></div><b><i id="ovb"></i></b>
+<button class="btn" id="retry" style="display:none;margin-top:20px">Try again 🔁</button></div>
+
+<section class="s" id="fin"><div class="wrap" id="finw"></div></section>
+
+<script>
+const $=(s,e=document)=>e.querySelector(s),h=(t,c,x)=>{const e=document.createElement(t);c&&(e.className=c);x!=null&&(e.innerHTML=x);return e};
+const vib=()=>navigator.vibrate&&navigator.vibrate(12);
+// floating background
+{const bg=$('#bg'),em=['💗','✨','🌸','🎀','💖','🤍'];for(let i=0;i<14;i++){const s=h('span','fl',em[i%6]);s.style.cssText=`left:${Math.random()*96}%;font-size:${14+Math.random()*16}px;opacity:.5;animation-duration:${14+Math.random()*14}s;animation-delay:-${Math.random()*20}s`;bg.append(s)}}
+const toast=m=>{const t=$('#toast');t.innerHTML=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2600)};
+const shake=e=>{e.classList.remove('shake');void e.offsetWidth;e.classList.add('shake')};
+const confetti=(n=40)=>{const em=['💗','🎀','✨','🌸','💖','🎉'];for(let i=0;i<n;i++){const c=h('span','cf',em[i%6]);c.style.cssText=`left:${Math.random()*100}%;font-size:${16+Math.random()*16}px;animation-delay:${Math.random()*.8}s`;document.body.append(c);setTimeout(()=>c.remove(),4500)}};
+let mt;const mas=(m,f)=>{$('#mf').textContent=f||'🐰';const b=$('#mb');b.textContent=m;b.classList.add('on');clearTimeout(mt);mt=setTimeout(()=>b.classList.remove('on'),2600)};
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&(e.target.classList.add('in'),io.unobserve(e.target))),{threshold:.15});
+const watch=()=>document.querySelectorAll('.reveal:not(.in)').forEach(e=>io.observe(e));
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{vib();confetti(10);$('#'+b.dataset.go).scrollIntoView({behavior:'smooth'})});
+
+const N=[ '😇 Basically perfect. 😌','' ];
+const Q=[
+{id:'annoy',k:'slider',t:'Be honest...<br>How annoying am I?'},
+{id:'colour',k:'one',t:'If your day had a colour today, what would it be?',o:['🩷 Soft pink','💙 Sky blue','💜 Lavender','💛 Sunshine yellow','🖤 Don\'t talk to me','🌈 Something else'],x:'Or name the exact colour…'},
+{note:'🫠 Unfortunately, you\'re stuck with me.'},
+{id:'evening',k:'one',t:'You get one completely free evening.<br>What are we doing?',o:['🍿 Movie + snacks','🌆 Walk + random conversations','🍕 Food hunt','🎮 Games + chaos','☕ Sit somewhere and talk for 4 hours','🛌 Stay home and disappear from society']},
+{id:'music',k:'one',t:'You\'re walking home and suddenly your life becomes a movie. What kind of soundtrack is playing?',o:['🎶 Calm & dreamy','🔥 Absolute banger','💔 Emotional','✨ Cute/happy','😈 Chaotic'],x:'Or type the song you\'d actually play 👀'},
+{id:'snack',k:'one',t:'Emergency.<br>You can save only ONE snack from a burning table. What are you grabbing? 😭',o:['🍫 Chocolate','🍟 Chips','🍦 Ice cream','🧋 Bubble tea','🍜 Noodles','🍿 Popcorn'],x:'Something else?'},
+{env:1},
+{id:'surprise',k:'one',t:'Someone gives you a completely random surprise.<br>What would make you happiest?',o:['🌷 Flowers','🍫 Food','🧸 Something cute','💌 Handwritten note','🎁 Something you mentioned once and forgot about','✨ Something completely unexpected']},
+{id:'roast',k:'text',cls:'chaos',banner:'🚨 TEMPORARY ROASTING LICENSE',pre:'You have officially been granted permission to roast me.',t:'If you could change ONE thing about me, what would it be?',ph:'Go ahead. Destroy me. 💀',hint:'This is a legally protected roasting zone. 💀',re:'Ouch. Noted. Emotionally recovering... 💀'},
+{id:'change',k:'text',big:1,t:'What things do u want me to change?',ph:'Type anything...',hint:'Seriously. You can be honest.<br>I might pretend to be offended for approximately 7 minutes, but I\'ll actually listen. 🫶'},
+{emo:'<h2>Okay...</h2><p>Enough investigating you for a second. 🥹</p><p>I actually made this because your opinion matters to me.</p><p>I don\'t want to assume I\'m being a good friend.<br><b>I\'d rather ask.</b></p>'},
+{id:'special',k:'text',big:1,t:'What makes a friendship feel special to you?',ph:'Take your time...'},
+{id:'more',k:'many',t:'What should I do more often?',o:['💬 Talk to you more','😂 Make you laugh','🫶 Check up on you','👂 Actually listen','📱 Send you random reels','🧠 Understand you better','🤡 Continue being stupid','💗 Make you feel appreciated','🙃 Annoy you less','✨ Something else'],x:'Anything else?',re:{1:'Excellent. This is a responsibility I accept. 🫡',8:'...I see.<br>We will discuss this later. 💀',6:'Stupidity: delivered in bulk. 🤡'},many:'Okayyyy, look at you being nice. 🥹'},
+{note:'🎀 Random reminder:<br>You are appreciated more than you probably realize.'},
+{id:'memory',k:'text',big:1,t:'What\'s one memory with me that you\'ll probably remember for a long time?',ph:'Even a tiny random one counts 🌸'},
+{id:'unsaid',k:'text',big:1,t:'Is there anything you\'ve wanted to tell me but never really got the chance to?',ph:'Anything...',hint:'You can say literally anything.<br>I\'ll read it properly. 🫶'},
+{id:'value',k:'one',t:'Do you feel like I actually show you that I value you?',o:['🥹 Yes, definitely','💗 Most of the time','🤏 Sometimes, but you could do better','😭 Bro, we need to talk','📝 I have things to say...'],x:'Say it here. Nothing is off limits.',xon:4,re:{3:'Okay. We talk. Properly. 🫡',4:'Go on. I\'m listening. 👂'}}
+];
+const S={},total=Q.filter(q=>q.id).length;
+const prog=()=>{const p=Math.round(Object.values(S).filter(s=>s.done).length/total*100);$('#pt').textContent=`Friendship Investigation: ${p}% 🔍`;$('#pf').style.width=p+'%'};
+const face=v=>v<=20?'😇':v<=50?'🙂':v<=80?'😳':'💀';
+const react=v=>v<=15?'Wow. I\'m basically perfect. 😌':v<=45?'Okay okay... manageable.':v<=75?'EXCUSE ME?? 😭':v<100?'I can explain.':'WHAT DID I DO ☠️';
+Q.forEach(q=>{
+ const box=$('#qs');
+ if(q.env)return box.append(mkEnv());
+ if(q.note)return box.append(h('div','note reveal',q.note));
+ if(q.emo)return box.append(h('div','card emo reveal',q.emo));
+ const c=h('div','card reveal'+(q.cls?' '+q.cls:'')),s=S[q.id]={sel:[],x:'',v:50,done:0},rx=h('div','rx');
+ const say=m=>{rx.innerHTML=m||'';rx.classList.remove('pop');void rx.offsetWidth;m&&rx.classList.add('pop')};
+ q.banner&&c.append(h('div','banner',q.banner));q.pre&&c.append(h('p','',q.pre));c.append(h('h3','',q.t));
+ if(q.k=='slider'){
+  const f=h('div','face','🤔'),r=h('input');r.type='range';r.min=0;r.max=100;r.value=50;
+  const lab=h('div','hint','');lab.style.cssText='display:flex;justify-content:space-between';lab.innerHTML='<span>0% 😇</span><span>100% 💀</span>';
+  r.oninput=()=>{s.v=+r.value;s.done=1;f.textContent=face(s.v);f.style.transform=`scale(${1+s.v/200})`;say(`<b>${s.v}%</b> — ${react(s.v)}`);s.v>80&&shake(c);s.v>=80?mas("WE NEED TO TALK."):s.v<=20?mas("YAY 😭"):s.v>=50&&mas("bro what");prog()};
+  c.append(f,r,lab);
+ }else if(q.k=='text'){
+  const t=h('textarea');t.rows=q.big?6:3;t.placeholder=q.ph||'';t.maxLength=3000;
+  t.oninput=()=>{s.x=t.value;s.done=!!t.value.trim();prog()};
+  t.onfocus=()=>{q.big&&mas("...okay, I'm listening.")};t.onchange=()=>{if(t.value.trim()&&q.re){say(q.re);shake(c);vib();mas('bro what')}};
+  c.append(t);
+ }else{
+  const ch=h('div','chips'),ex=q.xon!=null?h('textarea'):h('input');ex.placeholder=q.x||'';ex.maxLength=2000;if(q.xon==null)ex.type='text';else ex.rows=4;
+  ex.style.display=q.xon!=null?'none':'block';if(!q.x)ex.style.display='none';
+  const upd=()=>{s.done=!!(s.sel.length||s.x.trim());prog()};
+  q.o.forEach((o,i)=>{const b=h('button','chip',o);b.type='button';b.onclick=()=>{vib();
+   const on=s.sel.includes(i);
+   if(q.k=='one'){s.sel=[i];ch.querySelectorAll('.chip').forEach(e=>e.classList.remove('on'));b.classList.add('on')}
+   else{s.sel=on?s.sel.filter(x=>x!=i):[...s.sel,i];b.classList.toggle('on',!on)}
+   if(q.xon!=null)ex.style.display=s.sel.includes(q.xon)?'block':'none';
+   const sp=q.re&&q.re[i];say(!on||q.k=='one'?(sp||(q.many&&s.sel.length>=3?q.many:'')):'');if(sp&&/discuss/.test(sp))shake(c);
+   if(!on){if(({value:[0,1],more:[1,7]}[q.id]||[]).includes(i))mas("YAY 😭");if(q.id=='value'&&i>=3)mas("WE NEED TO TALK.");if(q.id=='more'&&i==6)mas("bro what")}
+   upd()};ch.append(b)});
+  ex.oninput=()=>{s.x=ex.value;upd()};c.append(ch,ex);
+ }
+ q.hint&&c.append(h('p','hint',q.hint));c.append(rx);box.append(c);
+});
+const ans=q=>{const s=S[q.id];if(q.k=='slider')return s.done?s.v+'% annoying':'(skipped)';if(q.k=='text')return s.x.trim()||'(skipped)';return[s.sel.map(i=>q.o[i]).join(', '),s.x.trim()&&'✍️ '+s.x.trim()].filter(Boolean).join(' | ')||'(skipped)'};
+watch();
+function mkEnv(){const c=h('div','card emo','<p class="hint">💌 You received a tiny message.</p><button class="env bob" aria-label="Open the tiny message">💌</button><div class="note" style="display:none">💗 Random reminder:<br>You don\'t have to be useful, funny, or happy all the time to be important to someone.</div>');
+ const b=$('.env',c),n=$('.note',c),hn=$('.hint',c);b.onclick=()=>{vib();b.style.display='none';hn.style.display='none';n.style.display='block';confetti(14);mas('YAY 😭')};return c}
+function mkYN(){const c=h('div','card emo','<h3>Ready to continue?</h3><div class="yn"><button class="btn" id="yes">YES 💗</button><button class="btn" id="no">NO</button></div><p class="hint" id="nh">&nbsp;</p>');
+ const no=$('#no',c),yes=$('#yes',c),yn=$('.yn',c),nh=$('#nh',c),M=['Nope 😌','Too slow 😭','You sure?? 👀','the button is scared 💀','Okay okay, last one...'];let n=0;
+ const dodge=e=>{if(n>=5)return;e.preventDefault();n++;no.style.right='auto';no.style.left=Math.random()*(yn.clientWidth-no.offsetWidth)+'px';no.style.top=Math.random()*(yn.clientHeight-no.offsetHeight)+'px';nh.textContent=M[n-1];vib();mas('bro what')};
+ no.addEventListener('pointerenter',dodge);no.addEventListener('pointerdown',dodge);
+ no.onclick=()=>{if(n<5)return dodge(new Event('x'));toast('Fine, brave one. Continuing anyway 😌');go(1)};
+ yes.onclick=()=>{confetti(20);mas('YAY 😭');go(1)};return c}
+const box=$('#qs');box.prepend(mkYN());
+const items=[...box.children,$('#endblk')];let cur=0;
+items.forEach(e=>e.classList.add('step','in'));
+const nav=h('div','nav','<button class="dnc" id="bk">← back</button><button class="btn" id="nx">Next →</button>');box.after(nav);
+function go(i,quiet){cur=Math.max(0,Math.min(items.length-1,i));items.forEach((e,k)=>e.classList.toggle('cur',k==cur));
+ $('#bk').style.visibility=cur>1?'visible':'hidden';$('#nx').style.display=cur==items.length-1?'none':'';nav.style.display=cur==0?'none':'flex';
+ document.body.classList.toggle('q',cur>0);if(!quiet){vib();$('#inv').scrollIntoView({behavior:'smooth'})}}
+$('#nx').onclick=()=>go(cur+1);$('#bk').onclick=()=>go(cur-1);go(0,1);
+const sid='xxxxxxxx-xxxx-4xxx-8xxx-xxxxxxxxxxxx'.replace(/x/g,()=>(Math.random()*16|0).toString(16));
+
+// easter eggs
+let hc=0;$('#eh').onclick=e=>{vib();e.target.style.transform=`scale(${1+ ++hc*.3})`;if(hc==5){toast('You found the secret heart. 💗<br>+100 friendship points');confetti(20);hc=0;e.target.style.transform=''}};
+$('#dnc').onclick=e=>{e.target.textContent='I literally told you not to. 😭';shake(e.target);vib()};
+
+// submit
+const ov=$('#ov'),ovt=$('#ovt'),ovb=$('#ovb');
+async function send(){
+ $('#retry').style.display='none';ov.style.display='flex';ovb.style.width='0';
+ const steps=['Sending friendship data...','Analyzing emotional damage...','Calculating how much better a friend I should become...','99%...','ERROR: TOO WHOLESOME 💗'];
+ ovt.textContent=steps[0];requestAnimationFrame(()=>ovb.style.width='100%');
+ let i=0;const iv=setInterval(()=>{ovt.textContent=steps[Math.min(++i,4)]},800);
+ const payload=Q.filter(q=>q.id).map(q=>({id:q.id,q:q.t.replace(/<[^>]+>/g,' '),a:ans(q)}));
+ const post=fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answers:payload,sid})}).then(r=>{if(!r.ok)throw 0});
+ try{await Promise.all([post,new Promise(r=>setTimeout(r,3600))]);clearInterval(iv);ov.style.display='none';$('#inv').style.display='none';document.body.classList.remove('q');finale()}
+ catch{clearInterval(iv);ovt.textContent='Hmm, that didn\'t send 😭 Your answers are still here — try again?';$('#retry').style.display='block'}
+}
+$('#sub').onclick=()=>{vib();send()};$('#retry').onclick=send;
+const wait=ms=>new Promise(r=>setTimeout(r,ms)),tap=x=>new Promise(r=>$(x).onclick=r);
+async function finale(){
+ const f=$('#fin'),w=$('#finw');f.style.display='flex';scrollTo(0,0);
+ w.innerHTML='<p class="hint">Something is suspiciously waiting here...</p><button class="gift bob" id="gb" aria-label="Open the gift box">🎁</button><p class="hint">tap it. carefully. 👀</p>';
+ await tap('#gb');const gb=$('#gb');gb.classList.remove('bob');gb.classList.add('sk');vib();await wait(1000);gb.textContent='✨';confetti(50);await wait(500);
+ w.innerHTML='<div class="card emo"><div style="font-size:56px">🏆</div><h2>THARIKA — FRIENDSHIP INVESTIGATION SURVIVOR</h2><p>Achievement unlocked:<br><b>Successfully putting up with me.</b> 💀</p></div><button class="btn" id="c1">Okay okay 😭</button>';
+ await tap('#c1');
+ w.innerHTML='<h1 class="wt">WAIT.</h1>';await wait(1800);
+ w.innerHTML='<h2>You thought that was everything? 😭</h2>';await wait(2400);
+ w.innerHTML='<p class="hint">One last envelope...</p><button class="env bob" id="eb" aria-label="Open the envelope" style="font-size:110px">💌</button><p class="hint">open it</p>';
+ await tap('#eb');vib();confetti(20);
+ const L=['<h2>Hey, Tharika. 💗</h2>','<p>You probably thought this was just a silly feedback website. 😭</p>','<p>But I actually made it because <b>your opinion matters to me</b>.</p>','<p>I wanted to know the little things.<br>The things you like.<br>The things you don\'t.<br>The things I could do better.<br>The things that make you happy.</p>','<p>Because sometimes we care about people a lot...<br>and still don\'t know if we\'re showing it properly.</p>','<p>So thank you for telling me. 🫶</p>','<p>And yes...<br>your answers are now safely in my hands. 👀<br><small>Please don\'t regret being honest. 😭</small></p>','<p style="font-family:Pacifico,cursive;color:var(--d);font-size:24px">— from your favourite idiot probably 💗</p>','<p style="font-size:22px"><b>Okay. NOW you\'re allowed to leave. 😭</b></p>'];
+ w.innerHTML='';L.forEach((x,i)=>{const e=h('div','reveal',x);e.style.setProperty('--d',i*.8+'s');w.append(e)});
+ requestAnimationFrame(()=>document.querySelectorAll('#finw .reveal').forEach(e=>e.classList.add('in')));
+ setTimeout(()=>confetti(40),L.length*800);
+}
+</script></body></html>

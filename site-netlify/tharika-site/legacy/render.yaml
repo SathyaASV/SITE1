@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tharika-site
+    runtime: docker
+    plan: starter        # persistent disks need a paid plan; free plans lose the database on restart
+    healthCheckPath: /healthz
+    disk: { name: data, mountPath: /data, sizeGB: 1 }
+    envVars:
+      - { key: ADMIN_PASSWORD, sync: false }
+      - { key: NOTIFY_URL, sync: false }
