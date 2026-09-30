@@ -44,13 +44,19 @@ export async function notifyOnce(id, origin) {
   const s = store();
   if (await s.get(`done/${id}`)) return 'already';
   if (!env('REPORT_SECRET') || !env('NOTIFY_URL')) { console.error('REPORT_SECRET / NOTIFY_URL not configured; submission saved but not notified'); return 'unconfigured'; }
-  let claim = await s.setJSON(`claim/${id}`, { t: Date.now() }, { onlyIfNew: true });
-  if (!claim.modified) {
+  const acquire = async () => {
+    const nonce = crypto.randomUUID();
+    await s.setJSON(`claim/${id}`, { t: Date.now(), nonce }, { onlyIfNew: true });
+    const current = await s.get(`claim/${id}`, { type: 'json' });
+    return current?.nonce === nonce;
+  };
+  let claimed = await acquire();
+  if (!claimed) {
     const c = await s.get(`claim/${id}`, { type: 'json' });
     if (c && Date.now() - c.t < 90_000) return 'in-progress';
     await s.delete(`claim/${id}`); // stale claim from a crashed attempt
-    claim = await s.setJSON(`claim/${id}`, { t: Date.now() }, { onlyIfNew: true });
-    if (!claim.modified) return 'in-progress';
+    claimed = await acquire();
+    if (!claimed) return 'in-progress';
   }
   const rec = await s.get(`sub/${id}`, { type: 'json' });
   const base = (env('PUBLIC_URL') || origin || rec?.origin || '').replace(/\/$/, '');
