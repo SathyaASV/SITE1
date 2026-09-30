@@ -62,7 +62,7 @@ export async function notifyOnce(id, origin) {
   const base = (env('PUBLIC_URL') || origin || rec?.origin || '').replace(/\/$/, '');
   const link = base ? `${base}/.netlify/functions/report?id=${encodeURIComponent(id)}&k=${encodeURIComponent(tok(id))}` : '';
   const ok = await push('💗 Tharika just submitted her answers!\nTap to read them 👀', link);
-  if (ok) { await s.set(`done/${id}`, '1'); return 'sent'; }
+  if (ok) { await s.set(`done/${id}`, '1'); console.log('notification sent for', id.slice(0, 8)); return 'sent'; }
   await s.delete(`claim/${id}`); // allow retry
   console.error('notify failed for', id.slice(0, 8), '(will retry)');
   return 'failed';
